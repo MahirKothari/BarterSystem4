@@ -1,0 +1,26 @@
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import WelcomeScreen from './screens/WelcomeScreen'
+import {createBottomTabNavigator} from 'react-navigation-tabs'
+import {createAppContainer} from 'react-navigation';
+import HomeScreen from './screens/HomeScreen';
+import ExchangeScreen from './screens/ExchangeScreen';
+
+export default class App extends React.Component{
+    render(){
+      return(
+        <AppContainer>
+          
+        </AppContainer>
+      )
+    }
+  }
+
+  const TabNavigator = createBottomTabNavigator({
+       HomeScreen:{screen:HomeScreen},
+       WelcomeScreen:{screen:WelcomeScreen},
+       ExchangeScreen:{screen:ExchangeScreen}
+  })
+
+  const AppContainer = createAppContainer(TabNavigator)
+  
